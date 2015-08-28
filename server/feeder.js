@@ -1,7 +1,7 @@
 Feed_Entries.before.insert(function (userId, doc) {
-    doc.published=new Date();
     doc.upvoters=[];
-    doc.votes=Math.floor((Math.random() * 100) + 1);
+    var sigma=Math.floor((Math.random()*17)+1);
+    doc.votes=Math.floor((Math.random() * 337) + sigma);
 });
 
 
@@ -22,11 +22,11 @@ function feedReader() {
 
     Feed.collections(collections);
 
-    var web_feed = {
+   var web_feed = {
         _id: '1',
         category: 'Web Development',
         link: 'http://pipes.yahoo.com/pipes/pipe.run?_id=cc012cad8243310c75ecd32ce1d544e3&_render=rss',
-        refresh_interval: 1800000
+        refresh_interval: 8000
     };
 
     Feed.createRssFeed(web_feed);
@@ -35,7 +35,7 @@ function feedReader() {
         _id: '2',
         category: 'Mobile Development',
         link: 'http://pipes.yahoo.com/pipes/pipe.run?_id=a3c9849e38b0e0d328c48bfc09f5d221&_render=rss',
-        refresh_interval: 1800000
+        refresh_interval: 8000
     };
 
     Feed.createRssFeed(mobile_feed);
@@ -44,9 +44,18 @@ function feedReader() {
         _id: '3',
         category: 'Java',
         link: 'http://pipes.yahoo.com/pipes/pipe.run?_id=94549d2bdb49ab89ff2d521139639f78&_render=rss',
-        refresh_interval: 1800000
+        refresh_interval: 8000
+    };
+    
+    Feed.createRssFeed(java_feed);
+    
+    var tech_feed = {
+        _id: '4',
+        category: 'Tech',
+        link: 'http://pipes.yahoo.com/pipes/pipe.run?_id=cc0453a93dd5258ce13d1892989335b8&_render=rss',
+        refresh_interval: 8000
     };
 
-    Feed.createRssFeed(java_feed);
+    Feed.createRssFeed(tech_feed);
     Feed.read();
 }

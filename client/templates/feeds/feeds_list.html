@@ -1,9 +1,13 @@
 <template name="feedsList">
   <div class="posts page">
     <div class="wrapper">
+      
       {{#each posts}}
         {{> feedItem}}
+      {{else}}
+       <a class="load-more" href="javascript:void(0);">No new posts</a>
       {{/each}}
+      
     </div>
 
     {{#if nextPath}}

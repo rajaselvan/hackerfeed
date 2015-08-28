@@ -6,6 +6,8 @@
     <div class="wrapper">
       {{#each posts}}
         {{> threadItem}}
+      {{else}}
+      <a class="load-more" href="javascript:void(0);">No new threads</a>
       {{/each}}
     </div>
 

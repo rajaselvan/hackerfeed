@@ -1,13 +1,25 @@
 <template name="postItem">
   <div class="post">
     <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a></h3>
+      <h3>{{title}}</h3>
       <p>
-        submitted by {{author}},
+        started by {{author}},
         <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
       </p>
     </div>
-    <a href="{{pathFor 'postPage'}}" class="hidden-xs discuss btn btn-default">Discuss</a>
+    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+  </div>
+</template>
+<template name="postItem2">
+  <div class="post">
+    <div class="post-content">
+      <h3 class="well">{{title}}</h3>
+     <blockquote>
+      {{desc}}
+     </blockquote>
+     <cite title="Source Title">started by {{author}}</cite>
+    </div>
+    
   </div>
 </template>

@@ -10,7 +10,9 @@ sacha:spin
 accounts-password
 accounts-facebook
 accounts-twitter
-accounts-google
 ian:accounts-ui-bootstrap-3
 audit-argument-checks
 danielqiu:feed
+meteorhacks:fast-render
+jquery
+momentjs:moment
