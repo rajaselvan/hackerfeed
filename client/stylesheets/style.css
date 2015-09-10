@@ -68,12 +68,18 @@ body{
   transition: all 300ms 0ms ease-in;
 }
 .post .upvote {
-  display: block;
-  margin: 5px 12px 0 0;
+  display: table-cell;
+  margin: 8px 12px 0 0;
   float: left;
+  
 }
 .post .post-content {
-  float: left;
+ vertical-align: top;
+  
+}
+
+.post .thread-content {
+ float:left;
   
 }
 .post .post-content h3 {
@@ -82,7 +88,18 @@ body{
   font-size: 16px;
   
 }
+.post .thread-content h3 {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 16px;
+  
+}
 .post .post-content h3 a {
+  display: table-cell;
+  margin-right: 5px;
+  color:#000;
+}
+.post .thread-content h3 a {
   display: inline-block;
   margin-right: 5px;
   color:#000;
@@ -94,7 +111,18 @@ body{
   color: #aaaaaa;
 }
 .post .post-content p {
-  margin: 0;
+ 
+  margin-left: 58px;
+  
+}
+.post .thread-content p {
+ 
+  margin:0;
+  
+}
+#iron-router-progress {
+    background-color : lightgreen;
+    
 }
 .post .discuss {
   display: block;

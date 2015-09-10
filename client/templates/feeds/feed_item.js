@@ -2,11 +2,8 @@ Template.feedItem.helpers({
   ownPost: function() {
     return this.userId == Meteor.userId();
   },
-  domain: function() {
-    var a = document.createElement('a');
-    a.href = this.link;
-    var target=a.hostname;
-    return target.substring(4,target.length);
+  unescaped: function() {
+    return unescape(this.title);
   },
   upvotedClass: function() {
     var userId = Meteor.userId();
@@ -24,3 +21,5 @@ Template.feedItem.events({
     Meteor.call('upvote', this._id);
   }
 });
+
+

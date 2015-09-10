@@ -15,4 +15,6 @@ audit-argument-checks
 danielqiu:feed
 meteorhacks:fast-render
 jquery
+percolate:synced-cron
+multiply:iron-router-progress
 momentjs:moment
