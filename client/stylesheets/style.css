@@ -24,6 +24,7 @@ body{
   position: relative;
   top: 0px;
   width: 100%;
+  min-height: 480px;
 }
 .navbar {
   margin-bottom: 10px;
@@ -242,11 +243,13 @@ body{
 
 #login-dropdown-list input {
   color: #000;
+  border-radius:0px;
 
 }
 
 #login-dropdown-list input:focus{
    border-bottom: 1.5px solid rgba(81, 203, 238, 1);
+   border-radius:0px;
 }
 
 .btn-Facebook{
